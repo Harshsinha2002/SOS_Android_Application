@@ -17,4 +17,13 @@
     <string name="retrieve_account"><u>RETRIEVE ACCOUNT</u></string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="note_your_password_must_contain_6_letters">NOTE : YOUR PASSWORD MUST CONTAIN 6 LETTERS</string>
+    <string name="safe_you"><u>SAFE YOU</u></string>
+    <string name="an_women_safety_android_app">A WOMEN SAFETY ANDROID APP</string>
+    <string name="sos">SOS</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="an_sos_message_will_be_sent_to_the_number">AN SOS message will be sent to the number</string>
+    <string name="police_100">POLICE : 100</string>
+    <string name="women_helpline_181">WOMEN HELPLINE : 181</string>
+    <string name="ambulance_102">AMBULANCE : 102</string>
+    <string name="safety_places">Safety Places</string>
 </resources>

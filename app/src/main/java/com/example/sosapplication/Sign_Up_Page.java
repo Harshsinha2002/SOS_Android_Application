@@ -34,7 +34,7 @@ public class Sign_Up_Page extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         TextInputEditText Email_editText = findViewById(R.id.Email_editText);
         TextInputEditText Password_editText = findViewById(R.id.Password_editText);
-        MaterialButton CreateAccount_btn = findViewById(R.id.CreateAccount_btn);
+        Button CreateAccount_btn = findViewById(R.id.CreateAccount_btn);
 
         CreateAccount_btn.setOnClickListener(new View.OnClickListener()
         {

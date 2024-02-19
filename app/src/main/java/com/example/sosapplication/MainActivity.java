@@ -3,6 +3,7 @@ package com.example.sosapplication;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -13,12 +14,14 @@ import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.health.connect.datatypes.ExerciseRoute;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +36,7 @@ import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Collections;
@@ -40,6 +44,8 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity {
     TextView User_Address;
     private static final int REQUEST_CHECK_SETTING = 1001;
+
+    private  static  final  int Call_Permission_Code = 1000;
     private LocationRequest locationRequest;
     double Latitude;
     double Longitude;
@@ -52,11 +58,15 @@ public class MainActivity extends AppCompatActivity {
 
         User_Address = findViewById(R.id.User_location);
         Button  SOS_Button = findViewById(R.id.SOS_btn);
+        Button SignOut_btn =  findViewById(R.id.SignOut_btn);
         locationRequest = LocationRequest.create(); // create a location request
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY); // set how accurately the location will be provided
         locationRequest.setInterval(5000); // interval at with the location is set
         locationRequest.setFastestInterval(2000);
-        Button SignOut_btn =  findViewById(R.id.SignOut_btn);
+        ImageView Call_Police = findViewById(R.id.Call_Police);
+        ImageView Call_FireSafety = findViewById(R.id.Call_FireSafety);
+        ImageView Call_Women_Helpline = findViewById(R.id.Call_Women_Helpline);
+        ImageView Call_Ambulance = findViewById(R.id.Call_Ambulance);
 
 
         SignOut_btn.setOnClickListener(new View.OnClickListener()
@@ -131,6 +141,108 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        Call_Police.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                    callPolice();
+            }
+        });
+
+
+        Call_FireSafety.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callFireSafety();
+            }
+        });
+
+
+        Call_Women_Helpline.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callWomenHelpLine();
+            }
+        });
+
+
+        Call_Ambulance.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                callAmbulance();
+            }
+        });
+    }
+    private void callPolice()
+    {
+        String number = "100";
+        if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, Call_Permission_Code);
+        }
+
+        else
+        {
+            String dial = "tel:" + number;
+            startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
+    }
+
+
+    private void callFireSafety()
+    {
+        String number = "101";
+        if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, Call_Permission_Code);
+        }
+
+        else
+        {
+            String dial = "tel:" + number;
+            startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
+    }
+
+
+    private void callWomenHelpLine()
+    {
+        String number = "181";
+        if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, Call_Permission_Code);
+        }
+
+        else
+        {
+            String dial = "tel:" + number;
+            startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
+    }
+
+
+    private void callAmbulance()
+    {
+        String number = "102";
+        if(ContextCompat.checkSelfPermission(MainActivity.this,Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, Call_Permission_Code);
+        }
+
+        else
+        {
+            String dial = "tel:" + number;
+            startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+        }
     }
 
     @Override
@@ -144,17 +256,25 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        else
+        else if(requestCode == 1001 && grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
         {
-            Toast.makeText(MainActivity.this, "App Permission Denied!! Check Settings", Toast.LENGTH_LONG);
+                callPolice();
+                callFireSafety();
+                callWomenHelpLine();
+                callAmbulance();
         }
-    }
+
+        else
+            {
+                Toast.makeText(MainActivity.this, "App Permission Denied!! Check Settings", Toast.LENGTH_LONG);
+            }
+        }
 
     private void sendSMS(Double Longitude, Double Latitude)
     {
         String phone1 = "7011934577";
         //String phone2 = "9625065291";
-        String message = "SOS NEED HELP!!!" + "\nCHECK  MY LOCATION " + "\nLongitude : " + Longitude + "\nLatitude : " + Latitude;
+        String message = "SOS NEED HELP!!!" + "\nCHECK  MY LOCATION " + "\nLatitude : " + Latitude + "\nLongitude : " + Longitude;
 
         SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage(phone1, null, message,null,null);

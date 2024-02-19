@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff"
-        android:alpha="0.5"
+        android:alpha="0.4"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_marginTop="120dp"
-            android:src="@drawable/sign_uo_logo"
+            android:src="@drawable/sign_up_logo"
             android:contentDescription="@string/todo1" />
 
         <TextView
@@ -86,7 +86,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp">
+                    android:layout_marginEnd="15dp"
+                    app:boxStrokeColor="#a53860"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextColor="#a53860"
+                    app:cursorColor="#a53860">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/Email_editText"
@@ -105,7 +109,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp">
+                    android:layout_marginEnd="15dp"
+                    app:boxStrokeColor="#a53860"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextColor="#a53860"
+                    app:cursorColor="#a53860">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/Password_editText"
@@ -123,9 +131,10 @@
                     android:layout_height="wrap_content"
                     android:text="@string/note_your_password_must_contain_6_letters"
                     android:textAlignment="center"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"/>
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/CreateAccount_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

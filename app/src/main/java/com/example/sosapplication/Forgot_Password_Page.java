@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -29,7 +30,7 @@ public class Forgot_Password_Page extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password_page);
 
         TextInputEditText Email_editText = findViewById(R.id.Email_editText);
-        MaterialButton Submit_btn = findViewById(R.id.Submit_btn);
+        Button Submit_btn = findViewById(R.id.Submit_btn);
         auth = FirebaseAuth.getInstance();
 
         Submit_btn.setOnClickListener(new View.OnClickListener()

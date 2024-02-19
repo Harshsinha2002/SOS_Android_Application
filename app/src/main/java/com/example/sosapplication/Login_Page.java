@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public class Login_Page extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         TextView SignUp_textView = findViewById(R.id.SignUp_textView);
         TextView ForgotPassword_textView = findViewById(R.id.ForgotPassword_textView);
-        MaterialButton Login_btn = findViewById(R.id.Login_btn);
+        Button Login_btn = findViewById(R.id.Login_btn);
         TextInputEditText Email_editText = findViewById(R.id.Email_editText);
         TextInputEditText Password_editText = findViewById(R.id.Password_editText);
 
