@@ -26,4 +26,8 @@
     <string name="women_helpline_181">WOMEN HELPLINE : 181</string>
     <string name="ambulance_102">AMBULANCE : 102</string>
     <string name="safety_places">Safety Places</string>
+    <string name="confirm_logout"><u>𝐂𝐎𝐍𝐅𝐈𝐑𝐌 𝐋𝐎𝐆𝐎𝐔𝐓</u></string>
+    <string name="do_you_really_want_to_logout">DO YOU REALLY WANT TO LOGOUT??</string>
+    <string name="cancel">CANCEL</string>
+    <string name="logout">LOGOUT</string>
 </resources>

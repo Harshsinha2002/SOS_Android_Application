@@ -276,6 +276,7 @@
                     android:background="#e9ecef">
 
                     <ImageView
+                        android:id="@+id/SafePlaces"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_marginTop="10dp"
@@ -293,23 +294,6 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/SignOut_btn"
-                android:layout_width="383dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="100dp"
-                android:background="@drawable/curve_corner_border"
-                android:padding="10dp"
-                android:text="@string/sign_out"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                app:cornerRadius="30dp" />
 
             <TextView
                 android:id="@+id/User_location"

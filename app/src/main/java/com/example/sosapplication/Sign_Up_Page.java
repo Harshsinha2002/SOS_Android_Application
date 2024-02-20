@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -31,10 +32,13 @@ public class Sign_Up_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_page);
 
+
         mAuth = FirebaseAuth.getInstance();
         TextInputEditText Email_editText = findViewById(R.id.Email_editText);
         TextInputEditText Password_editText = findViewById(R.id.Password_editText);
         Button CreateAccount_btn = findViewById(R.id.CreateAccount_btn);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
 
         CreateAccount_btn.setOnClickListener(new View.OnClickListener()
         {

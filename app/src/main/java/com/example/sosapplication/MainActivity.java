@@ -8,10 +8,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.ColorDrawable;
 import android.health.connect.datatypes.ExerciseRoute;
 import android.location.LocationManager;
 import android.net.Uri;
@@ -19,9 +21,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.telephony.SmsManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +43,7 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
+import com.google.firebase.annotations.concurrent.Background;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Collections;
@@ -50,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
     double Latitude;
     double Longitude;
 
+    Dialog dialog;
+    Button Dialog_Cancelbtn, Dialog_Logoutbtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -58,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
         User_Address = findViewById(R.id.User_location);
         Button  SOS_Button = findViewById(R.id.SOS_btn);
-        Button SignOut_btn =  findViewById(R.id.SignOut_btn);
         locationRequest = LocationRequest.create(); // create a location request
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY); // set how accurately the location will be provided
         locationRequest.setInterval(5000); // interval at with the location is set
@@ -67,19 +76,10 @@ public class MainActivity extends AppCompatActivity {
         ImageView Call_FireSafety = findViewById(R.id.Call_FireSafety);
         ImageView Call_Women_Helpline = findViewById(R.id.Call_Women_Helpline);
         ImageView Call_Ambulance = findViewById(R.id.Call_Ambulance);
+        ImageView SafePlaces = findViewById(R.id.SafePlaces);
 
 
-        SignOut_btn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(MainActivity.this, Login_Page.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
 
 
         SOS_Button.setOnClickListener(new View.OnClickListener() {
@@ -181,7 +181,64 @@ public class MainActivity extends AppCompatActivity {
                 callAmbulance();
             }
         });
+
+        SafePlaces.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(MainActivity.this, SafePlaces_Page.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        menu.add("Logout");
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item)
+    {
+        if(item.getTitle().equals("Logout"))
+        {
+            dialog = new Dialog(MainActivity.this);
+            dialog.setContentView(R.layout.custom_dialog_box);
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.custom_dialog_box_background));
+            dialog.setCancelable(false);
+            dialog.show();
+
+            Dialog_Cancelbtn = dialog.findViewById(R.id.Dialog_Cancelbtn);
+            Dialog_Logoutbtn = dialog.findViewById(R.id.Dialog_Logoutbtn);
+
+            Dialog_Cancelbtn.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    dialog.dismiss();
+                }
+            });
+
+            Dialog_Logoutbtn.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    FirebaseAuth.getInstance().signOut();
+                    Intent intent = new Intent(MainActivity.this, Login_Page.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void callPolice()
     {
         String number = "100";

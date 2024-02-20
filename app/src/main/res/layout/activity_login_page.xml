@@ -90,14 +90,17 @@
                     app:boxStrokeColor="#a53860"
                     app:boxStrokeWidth="2dp"
                     app:cursorColor="#a53860"
-                    app:hintTextColor="#a53860">
+                    app:hintTextColor="#a53860"
+                    android:hint="@string/email"
+                    app:hintAnimationEnabled="true"
+                    app:boxBackgroundColor="#ffffff"
+                    android:textColorHint="@color/black">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/Email_editText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:hint="@string/email"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/black"
                         android:textColorHint="#546E7A"
@@ -113,13 +116,16 @@
                     app:boxStrokeColor="#a53860"
                     app:boxStrokeWidth="2dp"
                     app:cursorColor="#a53860"
-                    app:hintTextColor="#a53860">
+                    app:hintTextColor="#a53860"
+                    android:textColorHint="@color/black"
+                    android:hint="@string/password"
+                    app:hintAnimationEnabled="true"
+                    app:boxBackgroundColor="#ffffff">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/Password_editText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/password"
                         android:inputType="textPassword"
                         android:textColor="@color/black"
                         android:textColorHint="#546E7A"

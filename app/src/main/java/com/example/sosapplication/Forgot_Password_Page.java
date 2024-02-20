@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -32,6 +33,8 @@ public class Forgot_Password_Page extends AppCompatActivity {
         TextInputEditText Email_editText = findViewById(R.id.Email_editText);
         Button Submit_btn = findViewById(R.id.Submit_btn);
         auth = FirebaseAuth.getInstance();
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
 
         Submit_btn.setOnClickListener(new View.OnClickListener()
         {

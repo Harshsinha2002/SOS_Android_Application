@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -38,6 +39,8 @@ public class Login_Page extends AppCompatActivity {
         Button Login_btn = findViewById(R.id.Login_btn);
         TextInputEditText Email_editText = findViewById(R.id.Email_editText);
         TextInputEditText Password_editText = findViewById(R.id.Password_editText);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pink)));
 
         SignUp_textView.setOnClickListener(new View.OnClickListener()
         {
