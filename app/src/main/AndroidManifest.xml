@@ -21,8 +21,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSApplication"
         tools:targetApi="31">
+
         <activity
-            android:name=".SafePlaces_Page"
+            android:name=".Create_New_User_Info_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Payment_Gateway_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Revolar_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Sound_Grenade_Ealarm_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Safety_Torch_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Alarm_Wristlet_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Safety_Rod_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Safer_Smart_Pendant_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Pepper_Spray_Pistol_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Product_Safelet_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Self_Defence_Tips_Page"
+            android:exported="false" />
+        <activity
+            android:name=".About_Us_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Safety_Products_Page"
+            android:exported="false" />
+        <activity
+            android:name=".Quick_Contacts_Page"
+            android:exported="false" />
+        <activity
+            android:name=".User_Profile_Page"
+            android:exported="false" />
+        <activity
+            android:name=".SafetyPlaces_Page"
             android:exported="false" />
         <activity
             android:name=".Login_Page"

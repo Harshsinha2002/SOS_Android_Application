@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Safety_Products_Page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/black"
+                app:strokeWidth="3dp"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffe5ec"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:padding="10dp"
+                        android:text="@string/safety_product_heading"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        tools:ignore="TextSizeCheck" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/safelet_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/safelet_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/safelet"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"
+                            android:textAlignment="viewStart"/>
+
+                        <TextView
+                            android:id="@+id/Safelet_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_9990"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹1̶3̶3̶2̶0̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="25% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/white"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/pepper_spray_pistol_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/pepper_spray_pistol_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="@string/pepper_spray_pistol"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"/>
+
+                        <TextView
+                            android:id="@+id/Pepper_Spray_Gun_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25sp"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25sp"
+                            android:text="₹6000"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹1̶2̶0̶0̶0̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="50% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/safer_smart_pendant_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/safer_smart_pendant_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/safer_pendant"
+                            android:textColor="@color/black"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/Safer_Pendant_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹1899"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹2̶3̶7̶0̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="20% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/white"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/safety_rod_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/safety_rod_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="@string/safety_rod"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"/>
+
+                        <TextView
+                            android:id="@+id/Safety_Rod_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25sp"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25sp"
+                            android:text="₹790"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹1̶3̶2̶0̶̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="40% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        app:cardCornerRadius="25dp"
+                        android:background="@color/white"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/alarm_wristlet_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/alarm_wristlet_img"
+                            android:paddingTop="7dp"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/alarm_wristlet"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"
+                            android:textAlignment="viewStart"/>
+
+                        <TextView
+                            android:id="@+id/Alarm_Wristlet_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹450"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹1̶1̶3̶0̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="60% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/white"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/safety_torch_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/safety_torch_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="@string/safety_torch"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"/>
+
+                        <TextView
+                            android:id="@+id/Safety_Torch_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25sp"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25sp"
+                            android:text="₹790"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹1̶3̶2̶0̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="40% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/sound_grenade_ealarm_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/sound_grenade_ealarm_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sound_grenade"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"
+                            android:textAlignment="viewStart"/>
+
+                        <TextView
+                            android:id="@+id/Sound_Grenade_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹999"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹1̶3̶3̶2̶0̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="25% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="160dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/white"
+                        app:cardCornerRadius="25dp"
+                        app:strokeColor="@color/pink"
+                        app:strokeWidth="3dp">
+
+                        <ImageView
+                            android:id="@+id/revolar_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/revolar_img"
+                            android:background="@color/white"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:text="@string/revolar"
+                            android:textColor="@color/black"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="20dp"/>
+
+                        <TextView
+                            android:id="@+id/Revolar_Heart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="❤︎"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/black"
+                            android:textAlignment="textEnd"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25sp"
+                        android:text="@string/self_defence_product"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25sp"
+                            android:text="₹6543"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:text="₹6̶9̶8̶3̶"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5sp"
+                            android:text="25% OFF"
+                            android:textAlignment="center"
+                            android:textColor="@color/green"
+                            android:textSize="15sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
